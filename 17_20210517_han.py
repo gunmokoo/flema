@@ -11,65 +11,61 @@ pygame.display.set_caption("일조") # 타이틀 제목
 
 clock = pygame.time.Clock() #프레임 설정 *이거 나중에 필요함
 
-background = pygame.image.load("C:/PythonWorkspace/flema/배경1.jpg") # 배경 그림 불러오기
+background = pygame.image.load("C:/PythonWorkspace/flema/img/display.jpg") # 배경 그림 불러오기
 
-setting = pygame.image.load("C:/PythonWorkspace/flema/배경3.png") # 설정 그림 불러오기
+setting = pygame.image.load("C:/PythonWorkspace/flema/img/setting.png") # 설정 그림 불러오기
 setting_size = setting.get_rect().size # 설정 이미지의 크기를 구해옴
 setting_w = setting_size[0] # 설정 가로 크기
 setting_h = setting_size[1] # 설정 세로 크기
 
-setscreen = pygame.image.load("C:/PythonWorkspace/flema/설정화면.png") #설정화면 그림 불러오기
-setscreen_size = setscreen.get_rect().size # 설정 이미지의 크기를 구해옴
-setscreen_w = setscreen_size[0] # 설정화면 가로 크기
-setscreen_h = setscreen_size[1] # 설정화면 세로 크기
-setscreens = []
+# setscreen = pygame.image.load("C:/PythonWorkspace/flema/img/설정화면.png") #설정화면 그림 불러오기
+# setscreen_size = setscreen.get_rect().size # 설정 이미지의 크기를 구해옴
+# setscreen_w = setscreen_size[0] # 설정화면 가로 크기
+# setscreen_h = setscreen_size[1] # 설정화면 세로 크기
+# setscreens = []
 
-arrowr = pygame.image.load("C:/PythonWorkspace/flema/배경5.png") # 오른쪽 화살표 그림 불러오기
+arrowr = pygame.image.load("C:/PythonWorkspace/flema/img/cursor_r.png") # 오른쪽 화살표 그림 불러오기
 aroowr_size = arrowr.get_rect().size # 오른쪽 화살표 이미지의 크기를 구해옴
 arrowr_w = aroowr_size[0] # 오른쪽 화살표 가로 크기
 arrowr_h = aroowr_size[1] # 오른쪽 화살표 세로 크기
 
-arrowl = pygame.image.load("C:/PythonWorkspace/flema/배경6.png") # 왼쪽 화살표 그림 불러오기
+arrowl = pygame.image.load("C:/PythonWorkspace/flema/img/cursor_l.png") # 왼쪽 화살표 그림 불러오기
 aroowl_size = arrowl.get_rect().size # 왼쪽 화살표 이미지의 크기를 구해옴
 arrowl_w = aroowl_size[0] # 왼쪽 화살표 가로 크기
 arrowl_h = aroowl_size[1] # 왼쪽 화살표 세로 크기
 
-yes_button = pygame.image.load("C:/PythonWorkspace/flema/예.png") # 예쓰버튼 그림 불러오기
+yes_button = pygame.image.load("C:/PythonWorkspace/flema/img/예.png") # 예쓰버튼 그림 불러오기
 yes_button_size = yes_button.get_rect().size # 설정 이미지의 크기를 구해옴
 yes_button_w = yes_button_size[0] # 설정 가로 크기
 yes_button_h = yes_button_size[1] # 설정 세로 크기
 
-no_button = pygame.image.load("C:/PythonWorkspace/flema/아니오.png") # 노버튼 그림 불러오기
+no_button = pygame.image.load("C:/PythonWorkspace/flema/img/아니오.png") # 노버튼 그림 불러오기
 no_button_size = no_button.get_rect().size # 설정 이미지의 크기를 구해옴
 no_button_w = no_button_size[0] # 설정 가로 크기
 no_button_h = no_button_size[1] # 설정 세로 크기
 
-game_screen = pygame.image.load("C:/PythonWorkspace/flema/게임2.jpg") # 게임 스크린 그림 불러오기
-game_screen_size = game_screen.get_rect().size # 게임 스크린 이미지의 크기를 구해옴
-game_screen_w = game_screen_size[0] # 게임 스크린 가로 크기
-game_screen_h = game_screen_size[1] # 게임 스크린 세로 크기
-
-game_bar = pygame.image.load("C:/PythonWorkspace/flema/게임3.jpg") # 바 그림 불러오기
+game_bar = pygame.image.load("C:/PythonWorkspace/flema/img/bar.png") # 바 그림 불러오기
 game_bar_size = game_bar.get_rect().size # 바 이미지의 크기를 구해옴
 game_bar_w = game_bar_size[0] # 바 가로 크기
 game_bar_h = game_bar_size[1] # 바 세로 
 
-back_button = pygame.image.load("C:/PythonWorkspace/flema/이전.jpg") # 바 그림 불러오기
-back_button_size = back_button.get_rect().size # 바 이미지의 크기를 구해옴
-back_button_w = back_button_size[0] # 바 가로 크기
-back_button_h = back_button_size[1] # 바 세로
+back_button = pygame.image.load("C:/PythonWorkspace/flema/img/이전.jpg") # 뒤로가기 그림 불러오기
+back_button_size = back_button.get_rect().size # 뒤로가기 이미지의 크기를 구해옴
+back_button_w = back_button_size[0] # 뒤로가기 가로 크기
+back_button_h = back_button_size[1] # 뒤로가기 세로
 
-game_down = pygame.image.load("C:/PythonWorkspace/flema/게임4.jpg") # 떨어지는 바 그림 불러오기
+game_down = pygame.image.load("C:/PythonWorkspace/flema/img/note.png") # 떨어지는 바 그림 불러오기
 game_down_size = game_down.get_rect().size # 떨어지는 바 이미지의 크기를 구해옴[]
 game_down_w = game_down_size[0] # 떨어지는 바 가로 크기
 game_down_h = game_down_size[1] # 떨어지는 바 세로 크기
 game_downs = [] # 떨어지는 바 n개를 불러오기 위해서
-game_down_x =[295, 435, 575, 715, 855] # 떨어지는 바 x 값 집합
+game_down_x =[310, 450, 590, 730, 870] # 떨어지는 바 x 값 집합
 game_down_x_pos = sample(game_down_x, 1) # 랜덤의 x 값
 game_down_y_pos = -100 # 떨어지는 바 y 값
 game_down_speed = 10 # 떨어지는 바 속도
 
 album_num = 1 # 앨범 순서 정하기
+album_opacity = 0
 LEFT = 1 #마우스 왼쪽클릭
 RIGHT = 3 #마우스 오른쪽 클릭
 
@@ -85,11 +81,10 @@ no_pull = 0
 note_one = 1
 yes_controll = 1
 
-crash_square = pygame.image.load("C:\\Pythonworkspace\\flema\\game5.jpg") 
+crash_square = pygame.image.load("C:\\Pythonworkspace\\flema\\img\\line.png") 
 crash_square_size = crash_square.get_rect().size
 crash_square_w = crash_square_size[0]
 crash_square_h = crash_square_size[1]
-
 
 game_down_remove = -1 # 떨어지는 바 사라지게 하기위한 변수
 
@@ -100,15 +95,10 @@ while running: # True 시 진행 False 시 종료
 
     dt = clock.tick(60) #게임 진행하는동안 60프레임으로 고정 *이거 나중에 필요함
 
-    album = pygame.image.load("C:/PythonWorkspace/flema/앨범{0}.png".format(album_num)) # 앨범 그림 불러오기
+    album = pygame.image.load("C:/PythonWorkspace/flema/img/앨범{0}.png".format(album_num)) # 앨범 그림 불러오기
     album_size = album.get_rect().size # 앨범 이미지의 크기를 구해옴
     album_w = album_size[0] # 앨범 가로 크기
     album_h = album_size[1] # 앨범 세로 크기
-
-    game_background = pygame.image.load("C:/PythonWorkspace/flema/배경1.jpg") # 게임 배경화면 그림 불러오기
-    game_background_size = game_background.get_rect().size # 게임 배경화면 이미지의 크기를 구해옴
-    game_background_w = game_background_size[0] # 게임 배경화면 가로 크기
-    game_background_h = game_background_size[1] # 게임 배경화면 세로 크기
 
     if album_num == 1:
         game_down_speed = 10 # 떨어지는 바 속도
@@ -159,18 +149,19 @@ while running: # True 시 진행 False 시 종료
                     yes_no = 0 # 변수를 0으로
             if 515.5 + yn_album_h - ( yn_yes_button_h *2) <= mousepos[0] <= 515.5 + yn_album_h - ( yn_yes_button_h *2) + yn_yes_button_w \
             and 277.5 + (yn_album_w/3) <=mousepos[1] <=  277.5+(yn_album_w/3) + yn_yes_button_h: # 예 버튼 클릭 좌 
-                    yes_no = 1 # 변수를 1으로
+                    yes_no = 0 # 변수를 0으로
                     game += 1 # 변수에 1을 더함
+                    album_opacity = 1
                     start_ticks = pygame.time.get_ticks() # 게임 시작 시간 정보
                     pygame.mixer.music.load("C:/PythonWorkspace/flema/music{0}.mp3".format(album_num)) #음악 불러오기
                     pygame.mixer.music.play(0) #음악 재생
                 
-            if 1110 <= mousepos[0] <= 1110 + setscreen_w and 50 <= mousepos[1] <= 50 + setting_h: #설정 클릭 했을때
-                setting_screen += 1 #setting_screen 변수에 1을 저장
-                print(setting_screen);
-                if game >=1:
-                    setting_screen = 0
-                    back_button_screen = 0
+            # if 1110 <= mousepos[0] <= 1110 + setscreen_w and 50 <= mousepos[1] <= 50 + setting_h: #설정 클릭 했을때
+            #     setting_screen += 1 #setting_screen 변수에 1을 저장
+            #     print(setting_screen);
+            #     if game >=1:
+            #         setting_screen = 0
+            #         back_button_screen = 0
                     
         if event.type == pygame.KEYDOWN: # 키보드 입력 이벤트 발생하려면 필요
             if event.key == pygame.K_LEFT: # 키보드 왼쪽버튼이 눌릴시에
@@ -301,22 +292,14 @@ while running: # True 시 진행 False 시 종료
     screen.blit(background, (0, 0)) # 0, 0 좌표에 배경 불러오기
     screen.blit(setting, (1110, 50)) # 좌표에 설정 불러오기
     screen.blit(album,(515.5,277.5)) #앨범 불러오기
-    if album_num != 3:
+    if album_num != 3 and album_opacity ==0:
         screen.blit(arrowr, (1030, 250)) # 좌표에 오른쪽 화살표 불러오기
-    if album_num != 1:
+    if album_num != 1 and album_opacity ==0:
         screen.blit(arrowl, (50, 250)) # 좌표에 왼쪽 화살표 불러오기
     if yes_no >= 1: # 변수가 1이상 일 때
         screen.blit(yes_button, ( 515.5 + (album_h / 2) - ( yes_button_h *2)    , 277.5 + (album_w/3))) # 예 버튼 불러오기
         screen.blit(no_button, ( 515.5 + (album_h / 2) + ( yes_button_h /2)    , 277.5 + (album_w/3) )) # 아니오 버튼 불러오기
-    if back_button_screen >= 1:
-        screen.blit(back_button, (screen_w / 2 +(setscreen_w/2) - back_button_w , screen_h/2 - (setscreen_h/2)))
     if game >=1: # 변수가 1이상 일 때
-        screen.blit(game_background, (0, 0)) # 게임 배경화면 불러오기
-        # screen.blit(game_screen, (290, 0)) # 게임 스크린 불러오기
-        # screen.blit(game_screen, (430, 0)) # 게임 스크린 불러오기
-        # screen.blit(game_screen, (570, 0)) # 게임 스크린 불러오기
-        # screen.blit(game_screen, (710, 0)) # 게임 스크린 불러오기
-        # screen.blit(game_screen, (850, 0)) # 게임 스크린 불러오기
         screen.blit(game_bar, (305, 605)) # 게임 바 불러오기
         screen.blit(game_bar, (445, 605)) # 게임 바 불러오기
         screen.blit(game_bar, (585, 605)) # 게임 바 불러오기
@@ -325,15 +308,15 @@ while running: # True 시 진행 False 시 종료
         screen.blit(back_button, (screen_w - back_button_w, 0)) # 게임 뒤로가기 버튼
 
         if no_pull == 1:  # 버튼을 눌러 no_pull가 1일떄에 
-            screen.blit(crash_square, (305,605)) # 좌표에 그림 출력
+            screen.blit(crash_square, (300,0)) # 좌표에 그림 출력
         if no_pull == 2:  # 버튼을 눌러 no_pull가 2일떄에
-            screen.blit(crash_square, (445,605))  # 좌표에 그림 출력
+            screen.blit(crash_square, (440,0))  # 좌표에 그림 출력
         if no_pull == 3:  # 버튼을 눌러 no_pull가 3일떄에
-            screen.blit(crash_square, (585,605))  # 좌표에 그림 출력
+            screen.blit(crash_square, (580,0))  # 좌표에 그림 출력
         if no_pull == 4:  # 버튼을 눌러 no_pull가 4일떄에
-            screen.blit(crash_square, (725,605))  # 좌표에 그림 출력
+            screen.blit(crash_square, (720,0))  # 좌표에 그림 출력
         if no_pull == 5:  # 버튼을 눌러 no_pull가 5일떄에
-            screen.blit(crash_square, (865,605))  # 좌표에 그림 출력
+            screen.blit(crash_square, (860,0))  # 좌표에 그림 출력
 
         timer = game_font.render(str(int(elapsed_time1)), True, (255, 255, 255)) # 시간 표시 폰트 이미지 불러오기
         screen.blit(timer, (0, 0)) # 게임 중 시간 표시
